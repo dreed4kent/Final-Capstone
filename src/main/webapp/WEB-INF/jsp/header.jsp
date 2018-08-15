@@ -30,6 +30,8 @@
 		</script>
 		
 	</head>
+	
+	
 	<body>
 		<header>
 			<c:url var="homePageHref" value="/" />
@@ -74,4 +76,4 @@
 		<c:if test="${not empty currentUser}">
 			<p id="currentUser">Current User: ${currentUser}</p>
 		</c:if>		
-		<div class="container">
+		<div class="container"> <!-- Map only stays centered while tag is unclosed. Have to clean up the HTML structure and edit the css. -->
