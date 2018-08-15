@@ -26,6 +26,7 @@ public class AuthenticationController {
 		return "login";
 	}
 	
+	
 	@RequestMapping(path="/login", method=RequestMethod.POST)
 	public String login(@RequestParam String userName, 
 						@RequestParam String password, 
