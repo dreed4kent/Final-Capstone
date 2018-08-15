@@ -12,7 +12,7 @@
 	    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.js "></script>
 	    <script src="https://cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.min.js"></script>
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	    <c:url var="cssHref" value="/site.css" />
+	    <c:url var="cssHref" value="/css/voterInformation.css" />
 		<link rel="stylesheet" type="text/css" href="${cssHref}">
 		
 		<script type="text/javascript">
@@ -37,13 +37,13 @@
 	<body>
 		<header>
 			<c:url var="homePageHref" value="/" />
-			<c:url var="imgSrc" value="/img/logo.png" />
+			<c:url var="imgSrc" value="/img/us_flag_header.png" />
 			<a href="${homePageHref}"><img src="${imgSrc}" class="img-responsive" /></a>
 		</header>
 		<nav class="navbar navbar-default">
-			<div class="container-fluid">
+			<div>
 				<ul class="nav navbar-nav">
-					<c:url var="homePageHref" value="/" />
+					<c:url var="homePageHref" value="/main" />
 					<li><a href="${homePageHref}">Home</a></li>
 					<c:if test="${not empty currentUser}">
 						<c:url var="dashboardHref" value="/users/${currentUser}" />
