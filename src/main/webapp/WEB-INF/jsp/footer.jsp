@@ -1,22 +1,40 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
+
+
+
 <body>
 
-<div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left">Copyright © 2018 - This was made by Derek, Tim and Trey!</p>
-      
-      <a href="https://github.com/treytomlin/TechElevatorFinalCapstoneProject" class="navbar-btn btn-danger btn pull-right">
-      <span class="social social-github"></span>Find us on GitHub!</a>
-    </div>
-    
-    
-  </div>
+<nav class="navbar navbar-expand-xl navbar-dark bg-primary flex-nowrap">
+    <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <span class="navbar-brand w-100">Alpha Voting App</span>
+    <div class="navbar-collapse collapse w-100 justify-content-center" id="navbar5">
+    
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-100"><!--spacer--></div>
+</nav>
+
   
   </body>
 </html>
+
+
 
