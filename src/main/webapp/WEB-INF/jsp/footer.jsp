@@ -8,14 +8,10 @@
 
 <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
-      <p class="navbar-text pull-left">Copyright © 2018 - Cloture, Inc.
-          
-            <a href="https://github.com/treytomlin/TechElevatorFinalCapstoneProject" target="_blank">Find us on GitHub</a>
- 
-      </p>
+      <p class="navbar-text pull-left">Copyright © 2018 - This was made by Derek, Tim and Trey!</p>
       
       <a href="https://github.com/treytomlin/TechElevatorFinalCapstoneProject" class="navbar-btn btn-danger btn pull-right">
-      <span class="glyphicon glyphicon-star"></span>&nbsp; Find us on GitHub</a>
+      <span class="social social-github"></span>Find us on GitHub!</a>
     </div>
     
     

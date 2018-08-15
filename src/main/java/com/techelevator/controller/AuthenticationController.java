@@ -26,6 +26,7 @@ public class AuthenticationController {
 		return "login";
 	}
 	
+	
 	@RequestMapping(path="/login", method=RequestMethod.POST)
 	public String login(@RequestParam String userName, 
 						@RequestParam String password, 
@@ -37,7 +38,7 @@ public class AuthenticationController {
 			if(destination != null && ! destination.isEmpty()) {
 				return "redirect:" + destination;
 			} else {
-				return "redirect:/users/"+userName;
+				return "redirect:/main";
 			}
 		} else {
 			return "redirect:/login";
@@ -48,6 +49,6 @@ public class AuthenticationController {
 	public String logout(ModelMap model, HttpSession session) {
 		model.remove("currentUser");
 		session.invalidate();
-		return "redirect:/";
+		return "redirect:/main";
 	}
 }

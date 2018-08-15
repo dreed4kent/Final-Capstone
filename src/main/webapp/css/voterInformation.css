@@ -1,22 +1,44 @@
 /* Page Header */
 header {
-    background-image: url('../img/us_flag_header.jpg');
+    background-image: url('../img/us_flag_header.png');
     background-size: 100% 100%;
 }
 
 /*  Navigation */
-nav ul {
+nav div {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #00589C;
+    font-size: 14px;
+    color: white;
 }
 
-nav ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
+nav div ul li {
+    padding-right: 16px;
+}
+
+nav div ul li a href{
+}
+
+.letterColor {
+	color: white;
+}
+
+.nav.navbar-nav.navbar-right li a {
+	color: white !important;
+}
+
+.nav.navbar-nav li a {
+	color: white !important;
+	background-color: #00589C !important;
+}
+
+.nav.navbar-nav.navbar-right li a:hover {
+  background-color: #70addd;
+}
+
+.nav.navbar-nav li a:hover {
+  background-color: #70addd !important;
+}
