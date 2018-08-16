@@ -25,12 +25,8 @@
 				
 				var pathname = window.location.pathname;
 				$("nav a[href='"+pathname+"']").parent().addClass("active");
-				
 			});
-			
-			
 		</script>
-		
 	</head>
 	
 	
