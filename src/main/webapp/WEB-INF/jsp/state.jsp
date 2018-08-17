@@ -10,8 +10,26 @@
             <button id="btnSearch" class="btn btn-success">SEARCH</button>
     </div>
    	<h3>The Senators for the State of <span id="stateName"></span>:</h3>
-   		<div id="senator1"></div>
-   		<div id="senator2" /></div>
+   		<div class="senator">
+   			<div id="senator1"/></div>
+	   		<div id=senator1Party /></div>
+	   		<div id="senator1Address" /></div>
+	   		<div id="senator1PhoneNumber" /></div>
+	   		<div id="senator1WebSite" /></div>
+	   		<div id="senator1" /></div>
+	   		<!-- <img src="senator1Image"/> -->
+   		</div>
+   		<br/>
+   		<br/>
+   		<div class="senator">
+   			<div id="senator2" /></div>
+	   		<div id="senator2Party" /></div>
+	   		<div id="senator2Address" /></div>
+	   		<div id="senator2PhoneNumber" /></div>
+	   		<div id="senator2WebSite" /></div>
+	   		<div id="senator2" /></div>
+	   		<!-- <img src="senator2Image"/> -->
+   		</div>
    		<br/>
    		<br/>
 <!-- 	<div id="stateName"></div>

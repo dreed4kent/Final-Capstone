@@ -1,11 +1,28 @@
 
+<footer class="containerNew">
+		<div class="footerItem">Terms</div>
+		<div class="footerItem">Privacy</div>
+		<div class="footerItem">Copyright</div>
+		<div class="footerItem">Team</div>
+		<div class="footerItem">Help</div>
+		<div class="footerItem">Contact</div>
+	</footer>
 
-<nav class="navbar navbar-expand-xl navbar-dark bg-primary flex-nowrap">
-    <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav id ="footer" class="navbar navbar-expand-xl navbar-dark bg-primary flex-nowrap">
     <span class="navbar-brand w-100">Alpha Voting App</span>
-    <div class="navbar-collapse collapse w-100 justify-content-center" id="navbar5">
+    <div class="navbar-collapse collapse w-100 justify-content-center" id="navbarfooter">
     
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
@@ -15,14 +32,13 @@
                 <a class="nav-link" href="#">Privacy</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="#">Copyright</a>
             </li>
         </ul>
     </div>
-    <div class="w-100"><!--spacer--></div>
+    <div class="w-100">spacer</div>
 </nav>
-
-  
+   -->
   </body>
 </html>
 
