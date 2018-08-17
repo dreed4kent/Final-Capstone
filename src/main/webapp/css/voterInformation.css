@@ -42,3 +42,9 @@ nav div ul li a href{
 .nav.navbar-nav li a:hover {
   background-color: #70addd !important;
 }
+
+/* State Information */
+.state-dropdown {
+	padding-left: 5%;
+	padding-right: 5%;
+}
