@@ -12,7 +12,8 @@
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	    <c:url var="cssHref" value="/css/voterInformation.css" />
 		<link rel="stylesheet" type="text/css" href="${cssHref}">
-		
+		<c:url value="/js/senators.js" var="senators"/>
+		<script type="text/javascript" src="${senators}"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$("time.timeago").timeago();

@@ -1,15 +1,5 @@
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-</head>
-
-
-
-<body>
-
 <nav class="navbar navbar-expand-xl navbar-dark bg-primary flex-nowrap">
     <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbar5">
         <span class="navbar-toggler-icon"></span>
