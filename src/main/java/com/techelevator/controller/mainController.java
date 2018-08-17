@@ -46,6 +46,11 @@ public class mainController {
 	public String displayState() {
 		return "state";
 	}
+	
+	@RequestMapping(path="/terms", method=RequestMethod.GET)
+	public String displayTerms() {
+		return "terms";
+	}
 }
 	
 	
