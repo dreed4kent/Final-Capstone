@@ -15,14 +15,19 @@ $(document).ready(function () {
             type: "GET",
             dataType: "json"
         }).done(function (data) {
+        	if (data.normalizedInput.line1 != "") {
+            	$("#districtName").html(data.divisions[data.offices[3].divisionId].name);
+            	$("#countyName").html(data.divisions[data.offices[13].divisionId].name);
+        	}
+        	
+        	
 //changing what comes after the "data." gets the data from that specific part of the api
         	console.log(data);
         	console.log(data.divisions);
         	allTheDatas = data;
         	$("#stateName").html(data.divisions[data.offices[2].divisionId].name);
-//        	$("#districtName").html(data.divisions[data.offices[3].divisionId].name);
-//        	$("#countyName").html(data.divisions[data.offices[13].divisionId].name);
-        	
+
+        	if (data.normalizedInput.state != "DC") {
         	//Senator #1
             $("#senator1").html(data.officials[2].name);
             $("#senator1WebSite").html(data.officials[2].urls);
@@ -39,6 +44,10 @@ $(document).ready(function () {
             $("#senator2PhoneNumber").html(data.officials[3].phones);
             $("#senator2Address").html(data.officials[3].address);
             $("#senator2Image").html(data.officials[3].photoUrl);
+        	} else {
+        		alert("Taxation Without Representation");
+        		$("#senator1").html("Washington D.C. has no Sentators");
+        	}
         }).fail(function (xhr, status, error) {
             console.log(error);
         });
