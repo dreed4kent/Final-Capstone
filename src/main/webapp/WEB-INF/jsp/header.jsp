@@ -61,6 +61,12 @@
 							<li><a href="${loginHref}">Log In</a></li>
 						</c:when>
 						<c:otherwise>
+						<c:url var="statePageAction" value="/state" />
+							<form id="statePageForm" action="${statePageAction}" method="GET">
+							<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
+							</form>
+							<li><a id="statePageLink" href="${statePageAction}">Your State</a></li>
+							
 							<c:url var="logoutAction" value="/logout" />
 							<form id="logoutForm" action="${logoutAction}" method="POST">
 							<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
