@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,10 +12,12 @@
 	    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.js "></script>
 	    <script src="https://cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.min.js"></script>
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	    <c:url value="js/main.js" var="mainjs"/>
+	    <script src="${mainjs}"></script>
 	    <c:url var="cssHref" value="/css/voterInformation.css" />
 		<link rel="stylesheet" type="text/css" href="${cssHref}">
-		
 		<script type="text/javascript">
+			const contextPath= '${pageContext.servletContext.contextPath}';
 			$(document).ready(function() {
 				$("time.timeago").timeago();
 				
@@ -23,12 +27,8 @@
 				
 				var pathname = window.location.pathname;
 				$("nav a[href='"+pathname+"']").parent().addClass("active");
-				
 			});
-			
-			
 		</script>
-		
 	</head>
 	
 	
@@ -63,6 +63,12 @@
 							<li><a href="${loginHref}">Log In</a></li>
 						</c:when>
 						<c:otherwise>
+						<c:url var="statePageAction" value="/state" />
+							<form id="statePageForm" action="${statePageAction}" method="GET">
+							<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
+							</form>
+							<li><a id="statePageLink" href="${statePageAction}">Your State</a></li>
+							
 							<c:url var="logoutAction" value="/logout" />
 							<form id="logoutForm" action="${logoutAction}" method="POST">
 							<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>

@@ -1,8 +1,3 @@
-/* Page Header */
-header {
-    background-image: url('../img/us_flag_header.png');
-    background-size: 100% 100%;
-}
 
 /*  Navigation */
 nav div {
@@ -47,4 +42,58 @@ nav div ul li a href{
 .state-dropdown {
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+#us-map{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+path:hover, circle:hover {
+  stroke: #ffffff !important;
+  stroke-width:4px;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+#path67 {
+  fill: none !important;
+  stroke: #A9A9A9 !important;
+  cursor: default;
+}
+#info-box {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #BF0A30;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: arial;
+}
+
+header {
+    background-image: url('../img/us_flag_header.png');
+    background-size: 100% 100%;
+}
+/* Page Footer */
+.containerNew {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  display: inline-flex;
+  flex-direction: row;
+  background-color: #00589C;
+  font-size: 14px;
+  color: white;
+  background-size: 100% 100%;
+  padding: 15px;
+}
+.row {
+	flex: 1;
 }
