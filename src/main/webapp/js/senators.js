@@ -26,7 +26,7 @@ $(document).ready(function () {
         	console.log(data.divisions);
         	allTheDatas = data;
         	$("#stateName").html(data.divisions[data.offices[2].divisionId].name);
-
+        	$("#rep").html(data.officials[3]);
         	if (data.normalizedInput.state != "DC") {
         	//Senator #1
             $("#senator1").html(data.officials[2].name);
@@ -44,6 +44,19 @@ $(document).ready(function () {
             $("#senator2PhoneNumber").html(data.officials[3].phones);
             $("#senator2Address").html(data.officials[3].address);
             $("#senator2Image").html(data.officials[3].photoUrl);
+            
+            //Local Representative
+            $("districtName").html(data.divisions[data.offices[3].divisionId].name);
+            $("#representativeName").html(data.officials[4].name);
+           $("#representativeWebSite").html(data.officials[4].urls);
+            $("#representativeParty").html(data.officials[4].party);
+            $("#representativePhoneNumber").html(data.officials[4].phones);
+            $("#representativeFB").html(data.officials[4].channels[0].id);
+            $("#representativeTwitter").html(data.officials[4].channels[1].id);
+            $("#representativeYouTube").html(data.officials[4].channels[2].id);
+            $("#representativeGooglePlus").html(data.officials[4].channels[3].id);
+            representativeTwitter
+//            $("#representativeImage").html(data.officials[4].photoUrl);
         	} else {
         		alert("Taxation Without Representation");
         		$("#senator1").html("Washington D.C. has no Sentators");

@@ -38,6 +38,12 @@ nav div ul li a href{
   background-color: #70addd !important;
 }
 
+/* State Information */
+.state-dropdown {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
 #us-map{
   display: block;
   position: absolute;
@@ -91,7 +97,6 @@ header {
 .row {
 	flex: 1;
 }
-
 .headerItem1 {
 	margin-right: auto;
 }
@@ -101,6 +106,3 @@ header {
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-
-
-

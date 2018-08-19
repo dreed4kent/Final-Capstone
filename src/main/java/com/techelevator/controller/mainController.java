@@ -29,8 +29,8 @@ public class mainController {
 	}
 	
 	@RequestMapping(path="/state", method=RequestMethod.GET)
-	public String displayState() {
-		return "state";
+	public String displayState(ModelMap model) {
+		return "state"; // <---- the jsp, not the js
 	}
 	
 	@RequestMapping(path="/terms", method=RequestMethod.GET)

@@ -12,11 +12,16 @@
 	    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.js "></script>
 	    <script src="https://cdn.jsdelivr.net/jquery.timeago/1.4.1/jquery.timeago.min.js"></script>
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	    <c:url value="js/main.js" var="mainjs"/>
+	    <script src="${mainjs}"></script>
 	    <c:url var="cssHref" value="/css/voterInformation.css" />
 		<link rel="stylesheet" type="text/css" href="${cssHref}">
+
 		<c:url value="/js/senators.js" var="senators"/>
 		<script type="text/javascript" src="${senators}"></script>
+
 		<script type="text/javascript">
+			const contextPath= '${pageContext.servletContext.contextPath}';
 			$(document).ready(function() {
 				$("time.timeago").timeago();
 				

@@ -20,3 +20,9 @@ if(ios) {
     return false;
   });
 }
+
+$(document).ready(function(){
+	$('#theStates').on('change', function(evt) {
+		  $('#stateform').submit()
+		})
+})
