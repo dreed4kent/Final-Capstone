@@ -37,6 +37,11 @@ public class mainController {
 	public String displayTerms() {
 		return "terms";
 	}
+	
+	@RequestMapping(path="/copyright", method=RequestMethod.GET)
+	public String displayCopyright() {
+		return "copyright";
+	}
 }
 	
 	

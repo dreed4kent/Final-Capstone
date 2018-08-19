@@ -32,11 +32,7 @@
 	
 	
 	<body>
-		<header>
-			<c:url var="homePageHref" value="/" />
-			<c:url var="imgSrc" value="/img/us_flag_header.png" />
-			<a href="${homePageHref}"><img src="${imgSrc}" class="img-responsive" /></a>
-		</header>
+	
 		<nav class="navbar navbar-default">
 			<div>
 				<ul class="nav navbar-nav">

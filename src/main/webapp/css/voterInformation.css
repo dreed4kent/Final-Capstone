@@ -92,6 +92,15 @@ header {
 	flex: 1;
 }
 
+.headerItem1 {
+	margin-right: auto;
+}
+
+.container420 {
+	display : flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
 
 
 
