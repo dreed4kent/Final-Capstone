@@ -37,11 +37,7 @@
 	
 	
 	<body>
-		<header>
-			<c:url var="homePageHref" value="/" />
-			<c:url var="imgSrc" value="/img/us_flag_header.png" />
-			<a href="${homePageHref}"><img src="${imgSrc}" class="img-responsive" /></a>
-		</header>
+	
 		<nav class="navbar navbar-default">
 			<div>
 				<ul class="nav navbar-nav">
@@ -58,6 +54,8 @@
 						<li><a href="${changePasswordHref}">Change Password</a></li>
 					</c:if>
 				</ul>
+				
+				
 				<ul class="nav navbar-nav navbar-right">
 					<c:choose>
 						<c:when test="${empty currentUser}">
@@ -66,6 +64,8 @@
 							<c:url var="loginHref" value="/login" />
 							<li><a href="${loginHref}">Log In</a></li>
 						</c:when>
+						
+						
 						<c:otherwise>
 						<c:url var="statePageAction" value="/state" />
 							<form id="statePageForm" action="${statePageAction}" method="GET">

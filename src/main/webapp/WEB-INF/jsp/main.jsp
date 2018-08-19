@@ -130,7 +130,7 @@
   <path id="WY" data-info="<div>State: Wyoming</div><div>Electoral Votes: 3</div>" fill="#ff0000" d="M353,161.9 l-1.5,25.4 -4.4,44 -2.7,-0.3 -83.3,-9.1 -27.9,-3 2,-12 6.9,-41 3.8,-24.2 1.3,-11.2 48.2,7 59.1,6.5z"/>
   <g id="DC">
     <path id="DC1" fill="#0000ff" d="M801.8,253.8 l-1.1-1.6 -1-0.8 1.1-1.6 2.2,1.5z"/>
-    <circle id="DC2" data-info="<div>District of Columbia</div><div>Electoral Votes: 0</div>" fill="##0000ff" stroke="#FFFFFF" stroke-width="1.5" cx="801.3" cy="251.8" r="5" opacity="1"/> <!-- Set opacity to "0" to hide DC circle -->
+    <circle id="DC2" data-info="<div>District of Columbia</div><div>Electoral Votes: 0 </div><div>Explore D.C!: [coming soon]</div>" fill="##0000ff" stroke="#FFFFFF" stroke-width="1.5" cx="801.3" cy="251.8" r="5" opacity="1"/> <!-- Set opacity to "0" to hide DC circle -->
   </g>
 </g>
 <path id="frames" fill="none" stroke="#A9A9A9" stroke-width="2" d="M215,493v55l36,45 M0,425h147l68,68h85l54,54v46"/>
