@@ -1,10 +1,11 @@
 var allTheDatas;
 $(document).ready(function () {
-//API working (sort of)	
+
+
     $("#btnSearch").on("click", function (event) {
         
         var url = "https://www.googleapis.com/civicinfo/v2/representatives";
-        var userAddress = $("#locationName").val();
+    	var userAddress = $("#locationName").val();
         var apiUrl = url;
         $.ajax({
             url: apiUrl,
