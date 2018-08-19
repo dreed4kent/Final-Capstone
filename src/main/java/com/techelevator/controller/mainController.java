@@ -10,17 +10,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //@SessionAttributes({"tempClass", "parkDetails"})
 
 public class mainController {
-
-
 	//@Autowired
 	//private ParkDAO parkdao; 
-	
-	
 	@RequestMapping("/main")
 	public String displayHomePage(ModelMap model) {
-		
 		//model.addAttribute("parks", allParks); 
-		
 		//if (model.get("tempClass") != null) {
 		//	System.out.println("HOMEPAGE..." + model.get("tempClass").toString()); 
 	//	}
@@ -41,6 +35,11 @@ public class mainController {
 	@RequestMapping(path="/copyright", method=RequestMethod.GET)
 	public String displayCopyright() {
 		return "copyright";
+	}
+	
+	@RequestMapping(path="/cookies", method=RequestMethod.GET)
+	public String displayCookies() {
+		return "cookies";
 	}
 }
 	

@@ -7,6 +7,14 @@
 <form id="termsPageForm" action="/capstone/terms" method="GET">
 	<input type="hidden" name="CSRF_TOKEN" value="VBB2wwsHD+KsjMVxrZk4KA=="/> </form>
 	<div><a id="termsPageLink" href="/capstone/terms">Terms and Conditions</a></div>
+	
+	
+	<form id="termsPageForm" action="/capstone/terms" method="GET">
+	<input type="hidden" name="CSRF_TOKEN" value="VBB2wwsHD+KsjMVxrZk4KA=="/> </form>
+	<div><a id="termsPageLink" href="/capstone/terms">Terms and Conditions</a></div>
+	
+	
+	
 		<div class="footerItem"> Privacy </div>
 		<div class="footerItem"> Copyright </div>		
 		<div class="footerItem"> Team </div>
