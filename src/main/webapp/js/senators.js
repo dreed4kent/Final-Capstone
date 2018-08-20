@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("#btnSearch").on("click", function (event) {
         
         var url = "https://www.googleapis.com/civicinfo/v2/representatives";
-    	var userAddress = $("#locationName").val();
+    	var userAddress = $("#selectedState");
         var apiUrl = url;
         $.ajax({
             url: apiUrl,
