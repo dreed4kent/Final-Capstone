@@ -1,11 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:import url="/WEB-INF/jsp/header.jsp" />
+<c:import url="/WEB-INF/jsp/newHeader.jsp" />
 
-
+<div>
 
 <c:url var="formAction" value="/state" />
-<form method="GET" action="state">
+<form class="mainDropMenu" method="GET" action="state">
 
 <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
 		
@@ -68,6 +68,11 @@
 		<input id="btnSearch" class="formSubmitButton" type="submit" value="Submit" />
 
 		</form>
+		</div>
+		<div></div>
+		<br/>
+				<div></div>
+		
 <br>
 
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>

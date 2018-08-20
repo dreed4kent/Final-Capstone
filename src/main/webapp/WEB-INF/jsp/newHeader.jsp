@@ -42,7 +42,7 @@
 			<div>
 				<ul class="nav navbar-nav">
 					<c:url var="homePageHref" value="/main" />
-					<li><a href="${homePageHref}">Home</a></li>
+					<li><a href="${homePageHref}"><b>Home</b></a></li>
 					<c:if test="${not empty currentUser}">
 						<c:url var="dashboardHref" value="/users/${currentUser}" />
 						<li><a href="${dashboardHref}">Private Messages</a></li>
