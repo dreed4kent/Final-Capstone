@@ -1,8 +1,7 @@
 var allTheDatas;
 $(document).ready(function () {
 
-	function getQueryVariable(variable)
-	{
+	function getQueryVariable(variable) {
 	       var query = window.location.search.substring(1);
 	       var vars = query.split("&");
 	       for (var i=0;i<vars.length;i++) {
@@ -12,12 +11,9 @@ $(document).ready(function () {
 	       return(false);
 	}
 	
-    $("#btnSearch").on("click", function (event) {
-    	//var parts = "http://localhost:8080/capstone/state?CSRF_TOKEN=jmeKjBtjYShPb4tJohbQUg%3D%3D&locationName=Alabama".split('=');
-    	//var userAddress = parts.pop() || parts.pop();
-    	
-    	
-    	var userAddress = getQueryVariable("locationName");
+	//$( "#btnSearch" ).change(function(event) {
+ // $("#btnSearch").on("click", function (event) {
+		var userAddress = getQueryVariable("locationName");
     	alert(userAddress);
       
     	
@@ -87,7 +83,7 @@ $(document).ready(function () {
         }).fail(function (xhr, status, error) {
             console.log(error);
         });
-    });
+//    });
 
 
 });

@@ -49,7 +49,7 @@
 	<div id="districtName"></div>
 	<div id="countyName"></div> -->
     
-    
+  <script type="text/javascript" src="${senators}"></script>
      	
         
 
