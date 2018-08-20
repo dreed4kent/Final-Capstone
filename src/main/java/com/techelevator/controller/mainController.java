@@ -1,10 +1,11 @@
 package com.techelevator.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-<<<<<<< HEAD
+
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
@@ -21,8 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.techelevator.model.State;
 import com.techelevator.model.User;
 import com.techelevator.model.UserDAO;
-=======
->>>>>>> 14597d877d200e5a9576e850a0ce159f7e1f7f68
+
 
 
 @Controller
@@ -52,27 +52,27 @@ public class mainController {
 	
 	@RequestMapping("/main")
 	public String displayMainPage(ModelMap model) {
+		
 		return "main";
 	}
 	
-//	@RequestMapping("/stateInput")
-//	public String displayStatePage(ModelMap model) {
-//		return "redirect:/state";
-//	}
+
 	
-	@RequestMapping("/state")
-	public String displayStatePage(ModelMap model) {
-		return "/state";
-	}
+
 	
 	@RequestMapping(path="/stateInput", method=RequestMethod.GET)
-	public String displayState(@RequestParam String state, ModelMap model) {
+	public String displayState(@RequestParam String state, ModelMap model, RedirectAttributes attr) {
 		State newState = new State();
 		newState.setState(state);
 		model.addAttribute("selectedState", newState);
-		
-		
+		attr.addFlashAttribute("flashState", newState);
 		return "redirect:/state"; // <---- the jsp, not the js
+	}
+	
+	@RequestMapping("/state")
+	public String displayStatePage(Model model) {
+		State state = (State) model.asMap().get("flashState");
+		return "/state";
 	}
 	
 	@RequestMapping(path="/terms", method=RequestMethod.GET)
