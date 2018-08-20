@@ -1,11 +1,14 @@
 var allTheDatas;
 $(document).ready(function () {
 
-
+	
     $("#btnSearch").on("click", function (event) {
-        
+    	var parts = "http://localhost:8080/capstone/state?CSRF_TOKEN=jmeKjBtjYShPb4tJohbQUg%3D%3D&locationName=Alabama".split('=');
+    	var userAddress = parts.pop() || parts.pop();
+    	alert(userAddress);
         var url = "https://www.googleapis.com/civicinfo/v2/representatives";
-    	var userAddress = $("#selectedState");
+        
+        
         var apiUrl = url;
         $.ajax({
             url: apiUrl,
@@ -16,6 +19,7 @@ $(document).ready(function () {
             type: "GET",
             dataType: "json"
         }).done(function (data) {
+        	
         	if (data.normalizedInput.line1 != "") {
             	$("#districtName").html(data.divisions[data.offices[3].divisionId].name);
             	$("#countyName").html(data.divisions[data.offices[13].divisionId].name);
