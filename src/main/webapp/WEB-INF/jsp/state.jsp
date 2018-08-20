@@ -2,7 +2,7 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
-
+<p><c:out value="${selectedState.newState}" /> <c:out value="${selectedState.state}" />test
 
     <h1>API Test</h1>
     <div class="container">

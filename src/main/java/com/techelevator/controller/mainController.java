@@ -4,15 +4,32 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.techelevator.model.State;
+import com.techelevator.model.User;
+import com.techelevator.model.UserDAO;
 
 
 @Controller
+@SessionAttributes("selectedState")
+
+
 //@SessionAttributes({"tempClass", "parkDetails"})
 
 public class mainController {
 	//@Autowired
 	//private ParkDAO parkdao; 
-	@RequestMapping("/main")
+	
+	@RequestMapping("/")
 	public String displayHomePage(ModelMap model) {
 		//model.addAttribute("parks", allParks); 
 		//if (model.get("tempClass") != null) {
@@ -22,9 +39,29 @@ public class mainController {
 		return "main"; 
 	}
 	
-	@RequestMapping(path="/state", method=RequestMethod.GET)
-	public String displayState(ModelMap model) {
-		return "state"; // <---- the jsp, not the js
+	@RequestMapping("/main")
+	public String displayMainPage(ModelMap model) {
+		return "main";
+	}
+	
+//	@RequestMapping("/stateInput")
+//	public String displayStatePage(ModelMap model) {
+//		return "redirect:/state";
+//	}
+	
+	@RequestMapping("/state")
+	public String displayStatePage(ModelMap model) {
+		return "/state";
+	}
+	
+	@RequestMapping(path="/stateInput", method=RequestMethod.GET)
+	public String displayState(@RequestParam String state, ModelMap model) {
+		State newState = new State();
+		newState.setState(state);
+		model.addAttribute("selectedState", newState);
+		
+		
+		return "redirect:/state"; // <---- the jsp, not the js
 	}
 	
 	@RequestMapping(path="/terms", method=RequestMethod.GET)
