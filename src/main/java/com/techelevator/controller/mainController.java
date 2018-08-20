@@ -5,24 +5,27 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e47bb0b41aac01d703b0ec7c31fd148d8158e3c1
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.model.State;
 import com.techelevator.model.User;
 import com.techelevator.model.UserDAO;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e47bb0b41aac01d703b0ec7c31fd148d8158e3c1
 
 
 @Controller
@@ -32,17 +35,12 @@ import com.techelevator.model.UserDAO;
 //@SessionAttributes({"tempClass", "parkDetails"})
 
 public class mainController {
-
-
 	//@Autowired
 	//private ParkDAO parkdao; 
 	
-	
 	@RequestMapping("/")
 	public String displayHomePage(ModelMap model) {
-		
 		//model.addAttribute("parks", allParks); 
-		
 		//if (model.get("tempClass") != null) {
 		//	System.out.println("HOMEPAGE..." + model.get("tempClass").toString()); 
 	//	}
@@ -83,6 +81,11 @@ public class mainController {
 	@RequestMapping(path="/copyright", method=RequestMethod.GET)
 	public String displayCopyright() {
 		return "copyright";
+	}
+	
+	@RequestMapping(path="/cookies", method=RequestMethod.GET)
+	public String displayCookies() {
+		return "cookies";
 	}
 }
 	
