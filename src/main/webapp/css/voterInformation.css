@@ -51,8 +51,6 @@ nav div ul li a href{
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 55px;
-  margin: 115px;
 }
 path:hover, circle:hover {
   stroke: #ffffff !important;
@@ -128,3 +126,5 @@ a {
     opacity: 0.5;
     
 }
+
+
