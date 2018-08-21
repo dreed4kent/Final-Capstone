@@ -17,8 +17,8 @@
 	    <c:url var="cssHref" value="/css/voterInformation.css" />
 		<link rel="stylesheet" type="text/css" href="${cssHref}">
 
-		<c:url value="/js/senators.js" var="senators"/>
-		<script type="text/javascript" src="${senators}"></script>
+		<c:url value="/js/state.js" var="state"/>
+		<script type="text/javascript" src="${state}"></script>
 
 		<script type="text/javascript">
 			const contextPath= '${pageContext.servletContext.contextPath}';

@@ -24,33 +24,18 @@ import com.techelevator.model.UserDAO;
 @Controller
 @SessionAttributes("selectedState")
 
-
-//@SessionAttributes({"tempClass", "parkDetails"})
-
 public class mainController {
-	//@Autowired
-	//private ParkDAO parkdao; 
-	
+
 	@RequestMapping("/")
 	public String displayHomePage(ModelMap model) {
-		//model.addAttribute("parks", allParks); 
-		//if (model.get("tempClass") != null) {
-		//	System.out.println("HOMEPAGE..." + model.get("tempClass").toString()); 
-	//	}
-		
 		return "main"; 
 	}
 	
 	@RequestMapping("/main")
 	public String displayMainPage(ModelMap model) {
-		
 		return "main";
 	}
-	
 
-	
-
-	
 	@RequestMapping(path="/stateInput", method=RequestMethod.GET)
 	public String displayState(@RequestParam String state, ModelMap model) {
 		model.addAttribute("selectedState", state);
