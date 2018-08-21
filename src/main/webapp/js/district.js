@@ -1,0 +1,67 @@
+$(document).ready(function () {
+ 
+	//function to get the selected state name from the URL
+	function getQueryVariable(variable) {
+	       var query = window.location.search.substring(1);
+	       var vars = query.split("&");
+	       for (var i=0;i<vars.length;i++) {
+	               var pair = vars[i].split("=");
+	               if(pair[0] == variable){return pair[1];}
+	       }
+	       return(false);
+	}
+	
+	var selectedState = getQueryVariable("districtinput");
+	//google's civic API
+    var apiUrl = "https://www.googleapis.com/civicinfo/v2/representatives";
+	
+	//connects to the API and gets desired data
+    $.ajax({
+        url: apiUrl,
+        data: {
+        	address: selectedState ,
+            key: "AIzaSyCZom8UkHqmSzLcAWfnfL41vOfirikaS3w"
+        },
+        type: "GET",
+        dataType: "json"
+    }).done(function (data) {
+    	
+    	$("#stateName").html(data.divisions[data.offices[2].divisionId].name);
+    	//checks input is not Washington DC
+    	if (data.normalizedInput.state != "DC") {
+    	//Senator #1
+        $("#senator1").html(data.officials[2].name);
+        $("#senator1WebSite").html(data.officials[2].urls);
+        $("#senator1Party").html(data.officials[2].party);
+        $("#senator1PhoneNumber").html(data.officials[2].phones);
+        $("#senator1Address").html(data.officials[2].address);
+        $("#senator1Image").html(data.officials[2].photoUrl);
+    	
+    	//Senator #2
+        $("#senator2").html(data.officials[3].name);
+        $("#senator2WebSite").html(data.officials[3].urls);
+        $("#senator2Party").html(data.officials[3].party);
+        $("#senator2PhoneNumber").html(data.officials[3].phones);
+        $("#senator2Address").html(data.officials[3].address);
+        $("#senator2Image").html(data.officials[3].photoUrl);
+        
+        //Governor
+        $("governorName").html(data.divisions[data.offices[3].divisionId].name);
+        $("#governorName").html(data.officials[4].name);
+       $("#governorWebSite").html(data.officials[4].urls);
+        $("#governorParty").html(data.officials[4].party);
+        $("#governorPhoneNumber").html(data.officials[4].phones);
+        $("#governorFB").html(data.officials[4].channels[0].id);
+        $("#governorTwitter").html(data.officials[4].channels[1].id);
+        $("#governorYouTube").html(data.officials[4].channels[2].id);
+       $("#governorGooglePlus").html(data.officials[4].channels[3].id);
+       $("#governorImage").html(data.officials[4].photoUrl);
+    	} else {
+    		//Washington DC
+    		alert("Taxation Without Representation");
+    		$("#senator1").html("Washington D.C. has no Sentators");
+    	}
+    }).fail(function (xhr, status, error) {
+        console.log(error);
+    });
+});

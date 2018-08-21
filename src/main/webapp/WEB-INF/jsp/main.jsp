@@ -6,7 +6,6 @@
 
 <c:url var="formAction" value="/state" />
 <form class="mainDropMenu" method="GET" action="state">
-
 <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
 		
 		<div class="state-dropdown">

@@ -42,11 +42,24 @@ public class mainController {
 		return "/state"; // <---- the jsp, not the js
 	}
 	
+	
 	@RequestMapping("/state")
 	public String displayStatePage(Model model) {
 		//State state = (State) model.asMap().get("flashState");
 		return "/state";
 	}
+	
+	@RequestMapping("/district")
+	public String displayDistrictPage(ModelMap map) {
+		return "/district";
+	}
+	
+	@RequestMapping(path="/districtInput", method=RequestMethod.GET)
+	public String displayDistrictInput (@RequestParam String district) {
+		return "/district";
+	}
+	
+	
 	
 	@RequestMapping(path="/terms", method=RequestMethod.GET)
 	public String displayTerms() {
