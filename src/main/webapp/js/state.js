@@ -11,7 +11,7 @@ $(document).ready(function () {
 	       return(false);
 	}
 	
-	var selectedState = getQueryVariable("locationName");
+	let selectedState = getQueryVariable("locationName");
 	
 	//google's civic API
     var apiUrl = "https://www.googleapis.com/civicinfo/v2/representatives";

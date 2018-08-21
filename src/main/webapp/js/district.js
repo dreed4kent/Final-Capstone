@@ -11,7 +11,13 @@ $(document).ready(function () {
 	       return(false);
 	}
 	
-	var selectedState = getQueryVariable("districtinput");
+	let userAddress = getQueryVariable("address");
+	let userApt = getQueryVariable("apt");
+	let userCity = getQueryVariable("city");
+	let userState = getQueryVariable("state");
+	let userZipCode = getQueryVariable("zipCode");
+	let fullAddress = userAddress + " " + userApt + " " + userCity + " " + userState + " "+ userZipCode;
+	//let userAddress = "1275 Kinnear Rd, Columbus, OH 43212";
 	//google's civic API
     var apiUrl = "https://www.googleapis.com/civicinfo/v2/representatives";
 	
@@ -19,13 +25,13 @@ $(document).ready(function () {
     $.ajax({
         url: apiUrl,
         data: {
-        	address: selectedState ,
+        	address: fullAddress,
             key: "AIzaSyCZom8UkHqmSzLcAWfnfL41vOfirikaS3w"
         },
         type: "GET",
         dataType: "json"
     }).done(function (data) {
-    	
+    	console.log(data);
     	$("#stateName").html(data.divisions[data.offices[2].divisionId].name);
     	//checks input is not Washington DC
     	if (data.normalizedInput.state != "DC") {
@@ -35,7 +41,7 @@ $(document).ready(function () {
         $("#senator1Party").html(data.officials[2].party);
         $("#senator1PhoneNumber").html(data.officials[2].phones);
         $("#senator1Address").html(data.officials[2].address);
-        $("#senator1Image").html(data.officials[2].photoUrl);
+        //$("#senator1Image").html(data.officials[2].photoUrl);
     	
     	//Senator #2
         $("#senator2").html(data.officials[3].name);
@@ -43,19 +49,19 @@ $(document).ready(function () {
         $("#senator2Party").html(data.officials[3].party);
         $("#senator2PhoneNumber").html(data.officials[3].phones);
         $("#senator2Address").html(data.officials[3].address);
-        $("#senator2Image").html(data.officials[3].photoUrl);
+       // $("#senator2Image").html(data.officials[3].photoUrl);
         
         //Governor
-        $("governorName").html(data.divisions[data.offices[3].divisionId].name);
-        $("#governorName").html(data.officials[4].name);
-       $("#governorWebSite").html(data.officials[4].urls);
-        $("#governorParty").html(data.officials[4].party);
-        $("#governorPhoneNumber").html(data.officials[4].phones);
-        $("#governorFB").html(data.officials[4].channels[0].id);
-        $("#governorTwitter").html(data.officials[4].channels[1].id);
-        $("#governorYouTube").html(data.officials[4].channels[2].id);
-       $("#governorGooglePlus").html(data.officials[4].channels[3].id);
-       $("#governorImage").html(data.officials[4].photoUrl);
+        $("representativeName").html(data.divisions[data.offices[3].divisionId].name);
+        $("#representativeName").html(data.officials[4].name);
+       $("#representativeWebSite").html(data.officials[4].urls);
+        $("#representativeParty").html(data.officials[4].party);
+        $("#representativePhoneNumber").html(data.officials[4].phones);
+        $("#representativeFB").html(data.officials[4].channels[0].id);
+        $("#representativeTwitter").html(data.officials[4].channels[1].id);
+        $("#representativeYouTube").html(data.officials[4].channels[2].id);
+       $("#representativeGooglePlus").html(data.officials[4].channels[3].id);
+       //$("#governorImage").html(data.officials[4].photoUrl);
     	} else {
     		//Washington DC
     		alert("Taxation Without Representation");
