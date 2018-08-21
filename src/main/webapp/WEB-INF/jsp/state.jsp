@@ -7,8 +7,11 @@
  		<b><div id="senator1"/></div></b>
   		<div id=senator1Party /></div>
   		<div id="senator1Address" /></div>
-  		<div id="senator1PhoneNumber" /></div>
+  		<div id="senator1PhoneNumber"/></div>
   		<div id="senator1WebSite" /></div>
+  		
+  		<c:url var="website1" value="${senator1WebSite}"></c:url>
+  		<div class="senatorWebsite1"><a href="${website1}">Senator's Website</a></div>
   		<div id="senator1" /></div>
   		<!-- <img src="senator1Image"/> -->
  	</div>

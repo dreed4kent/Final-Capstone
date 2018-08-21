@@ -32,7 +32,9 @@ $(document).ready(function () {
     	if (data.normalizedInput.state != "DC") {
     	//Senator #1
         $("#senator1").html(data.officials[2].name);
-        $("#senator1WebSite").html(data.officials[2].urls);
+        var website1 = $("<a>").attr("href", data.officials[2].urls); //do an image the same way, except using "src"
+        website1.attr("target","_blank").text(data.officials[2].urls);
+        $("#senator1WebSite").append(website1);
         $("#senator1Party").html(data.officials[2].party);
         $("#senator1PhoneNumber").html(data.officials[2].phones);
         $("#senator1Address").html(data.officials[2].address);
