@@ -1,9 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
-<h1>TESTING!!</h1>
 
-	<h3><span id="stateName"></span>:</h3>
+ 	<h3><span id="stateName"></span>:</h3>
+
 	<div class="senator"> <h4>Senators:</h4> 
 		<b><div id="senator1"/></div></b>
 		<div id=senator1Party /></div>
@@ -24,17 +24,28 @@
 		<!-- <img src="senator2Image"/> -->
 	</div>
 	<br/>
-	<div class="governor"><h4>Governor:</h4>
-	   	<b><div id="governorName"></div></b>
- 		<div id="governorParty"></div>
-		<div id="governorPhoneNumber"></div>
-		<div id="governorWebSite"></div> 
- 		<div>https://www.facebook.com/<span id="governorFB"></span></div>
-		<div>https://twitter.com/<span id="governorTwitter"></span></div>
-		<div>https://www.youtube.com/results?search_query=UCtVl3kb7Xvt3pY7l6x-M6LA<span id="governorYouTube"></span></div>
-		<div>https://plus.google.com/<span id="governorGooglePlus"></span></div>
-	</div>
+	<div class="representatives"><h4>Your Representative:</h4>
+		<b><div id="representativeName"></div></b>
+    	<div id="representativeParty"></div>
+   		<div id="representativePhoneNumber"></div>
+   		<div id="representativeWebSite"></div> 
+   		<div>https://www.facebook.com/<span id="representativeFB"></span></div>
+   		<div>https://twitter.com/<span id="representativeTwitter"></span></div>
+   		<div>https://www.youtube.com/results?search_query=UCtVl3kb7Xvt3pY7l6x-M6LA<span id="representativeYouTube"></span></div>
+   		<div>https://plus.google.com/<span id="representativeGooglePlus"></span></div>
+   	</div>
     
-<script type="text/javascript" src="${state}"></script>
+
+  <c:url value="/js/district.js" var="district"/>
+<script type="text/javascript" src="${district}"></script>
+
+
+
+
+
+
+
+
+
      	
 <c:import url="/WEB-INF/jsp/footer.jsp" />

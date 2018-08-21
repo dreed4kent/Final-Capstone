@@ -40,8 +40,18 @@
 
 	<div>
 		<c:url var="district" value="/districtInput"/>
-		<form method="GET" action="${district}">
-			<input type="text" id="districtSearch"/>
+		<form method="GET" name="" action="${district}">
+			<input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
+			<label for="address">Address:</label>
+			<input type="text" id="districtSearch" name="address"/>
+			<label for="apt">Apt:</label>
+			<input type="text" id="districtSearch" name="apt"/>
+			<label for="city">City:</label>
+			<input type="text" id="districtSearch" name="city"/>
+			<label for="state">State:</label>
+			<input type="text" id="districtSearch" name="state"/>
+			<label for="zipCode">Zip Code:</label>
+			<input type="text" id="districtSearch" name="zipCode"/>
 			<button id="districtButtonSearch">Enter your address to find your Reps!</button>
 		</form>
 	</div>
@@ -50,6 +60,7 @@
 	<form class="districtSearch" method="GET" action=district>
 <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/> --%>
   <script type="text/javascript" src="${state}"></script>
+
      	
         
 
