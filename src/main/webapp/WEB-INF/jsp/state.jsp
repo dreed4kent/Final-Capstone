@@ -42,6 +42,15 @@
 			<button id="districtButtonSearch">Enter your address to find your Reps!</button>
 		</form>
 	</div>
+	
+	<h4>Townhalls:</h4>
+	<ul>
+		<c:forEach var="townhall" items="${townhalls}">
+			<li>${townhall.representative} ${townhall.district} ${townhall.dates} ${townhall.times} ${townhall.address}</li>
+		</c:forEach>
+	</ul>
+	<br>
+	<br>
 
 <%-- 	<c:url var="formAction" value="/district" />
 	<form class="districtSearch" method="GET" action=district>

@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.model.State;
+import com.techelevator.model.Townhall;
+import com.techelevator.model.TownhallDAO;
 import com.techelevator.model.User;
 import com.techelevator.model.UserDAO;
 
@@ -25,6 +29,9 @@ import com.techelevator.model.UserDAO;
 @SessionAttributes("selectedState")
 
 public class mainController {
+	
+	@Autowired
+	private TownhallDAO townhallDAO;
 
 	@RequestMapping("/")
 	public String displayHomePage(ModelMap model) {
@@ -43,9 +50,10 @@ public class mainController {
 	}
 	
 	
-	@RequestMapping("/state")
-	public String displayStatePage(Model model) {
-		//State state = (State) model.asMap().get("flashState");
+	@RequestMapping(path="/state", method=RequestMethod.GET)
+	public String displayStatePage(@RequestParam String locationName, ModelMap map) {
+		List<Townhall> townhalls = townhallDAO.getAllTownhalls(locationName);
+		map.addAttribute("townhalls", townhalls);
 		return "/state";
 	}
 	
