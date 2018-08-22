@@ -63,7 +63,11 @@ public class mainController {
 	}
 	
 	@RequestMapping(path="/districtInput", method=RequestMethod.GET)
-	public String displayDistrictInput (@RequestParam String district) {
+	public String displayDistrictInput (@RequestParam String address,
+										@RequestParam String apt, 
+										@RequestParam String city, 
+										@RequestParam String state, 
+										@RequestParam int zipCode ) {
 		return "/district";
 	}
 	
