@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.model.State;
@@ -63,7 +65,11 @@ public class mainController {
 		return "/district";
 	}
 	
-	
+	@RequestMapping (path="/users/{userUrl}/messages/new", method=RequestMethod.GET)
+	public String displayAskQuestion(HttpSession session, @PathVariable String userUrl) {
+		
+		return "askQuestion";
+	}
 	
 	@RequestMapping(path="/terms", method=RequestMethod.GET)
 	public String displayTerms() {

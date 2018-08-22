@@ -26,7 +26,7 @@ $(document).ready(function () {
         type: "GET",
         dataType: "json"
     }).done(function (data) {
-    	
+    	console.log(data);
     	$("#stateName").html(data.divisions[data.offices[2].divisionId].name);
     	//checks input is not Washington DC
     	if (data.normalizedInput.state != "DC") {
