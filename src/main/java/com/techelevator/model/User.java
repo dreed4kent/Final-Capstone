@@ -13,8 +13,12 @@ public class User {
 	})
 	private String password;
 	private String role;
-	
 	private String confirmPassword;
+	private String address;
+	private String apt;
+	private String city;
+	private String state;
+	private String zipCode;
 	
 	public String getUserName() {
 		return userName;
@@ -46,9 +50,39 @@ public class User {
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
-	@Override
-	public String toString() {
-		return userName;
+//	@Override
+//	public String toString() {
+//		return userName;
+//	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getApt() {
+		return apt;
+	}
+	public void setApt(String apt) {
+		this.apt = apt;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public String getZipCode() {
+		return zipCode;
+	}
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 	
 	

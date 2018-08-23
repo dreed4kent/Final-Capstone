@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
-=======
+
 import java.util.List;
 
->>>>>>> 9924e51bfab2585f2e5fe29267c30cd339902841
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +22,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.techelevator.model.ForumDAO;
+import com.techelevator.model.Question;
 import com.techelevator.model.State;
 import com.techelevator.model.Townhall;
 import com.techelevator.model.TownhallDAO;
@@ -37,9 +38,13 @@ public class mainController {
 	
 	@Autowired
 	private TownhallDAO townhallDAO;
+	
+	@Autowired
+	private ForumDAO forumDAO;
+	
 
 	@RequestMapping("/")
-	public String displayHomePage(ModelMap model) {
+	public String displayHomePage() {
 		return "main"; 
 	}
 	
@@ -78,9 +83,41 @@ public class mainController {
 	
 	@RequestMapping (path="/users/{userUrl}/messages/new", method=RequestMethod.GET)
 	public String displayAskQuestion(HttpSession session, @PathVariable String userUrl) {
-		
+		session.getAttribute("currentUser");
 		return "askQuestion";
 	}
+//	@RequestMapping (path="/users/${forumUrl}/messages", method=RequestMethod.GET)
+//	public String displayForum(HttpSession session, @PathVariable String forumUrl) {
+//		session.getAttribute("currentUser");
+//		return "forum";
+	
+	@RequestMapping(path="/submit", method=RequestMethod.POST)
+	public String displayForumFromQuestionPage(ModelMap map,
+											   HttpSession session,
+											   @RequestParam String representative,
+								   			   @RequestParam String topic,
+								   			   @RequestParam String question) {
+		 User user = new User();
+		 user = (User) session.getAttribute("currentUser");
+		 
+		
+		forumDAO.saveQuestion(user.getUserName(), representative, topic, question);
+		
+		return "redirect:/";
+	}
+	
+	
+	
+	
+	@RequestMapping (path="forum", method=RequestMethod.GET)
+		public String displayForum() {
+		return "forum";
+	}
+
+//	@RequestMapping(path="/submit", method=RequestMethod.POST)
+//	public String displayAskQuestionPage(Model model) {
+//		return "redirect:/forum";
+//	}
 	
 	@RequestMapping(path="/terms", method=RequestMethod.GET)
 	public String displayTerms() {

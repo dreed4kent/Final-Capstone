@@ -17,7 +17,7 @@ $(document).ready(function () {
 	let userState = getQueryVariable("state");
 	let userZipCode = getQueryVariable("zipCode");
 	let fullAddress = userAddress + " " + userApt + " " + userCity + " " + userState + " "+ userZipCode;
-	//let userAddress = "1275 Kinnear Rd, Columbus, OH 43212";
+	//let fullAddress = "1275 Kinnear Rd, Columbus, OH 43212";
 	//google's civic API
     var apiUrl = "https://www.googleapis.com/civicinfo/v2/representatives";
 	

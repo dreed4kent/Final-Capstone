@@ -16,4 +16,12 @@ CREATE TABLE app_user (
   salt varchar(255) NOT NULL
 );
 
+CREATE TABLE FORUM_QUESTIONS (
+  id SERIAL PRIMARY KEY,
+    user_name varchar(32) NOT NULL,
+    representative_name varchar(32) NOT NULL,
+    topic varchar(32) NOT NULL,
+    question varchar(255) NOT NULL
+);
+
 COMMIT;

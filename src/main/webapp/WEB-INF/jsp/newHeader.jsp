@@ -17,7 +17,7 @@
 	    <c:url var="cssHref" value="/css/voterInformation.css" />
 		<link rel="stylesheet" type="text/css" href="${cssHref}">
 
-		<c:url value="/js/senators.js" var="senators"/>
+		<c:url value="/js/state.js" var="senators"/>
 		<script type="text/javascript" src="${senators}"></script>
 
 		<script type="text/javascript">
@@ -44,14 +44,14 @@
 					<c:url var="homePageHref" value="/main" />
 					<li><a href="${homePageHref}"><b>Home</b></a></li>
 					<c:if test="${not empty currentUser}">
-						<c:url var="dashboardHref" value="/users/${currentUser}" />
-						<li><a href="${dashboardHref}">Private Messages</a></li>
+						<%-- <c:url var="dashboardHref" value="/users/${currentUser}" />
+						<li><a href="${dashboardHref}">Private Messages</a></li> --%>
 						<c:url var="newMessageHref" value="/users/${currentUser}/messages/new" />
-						<li><a href="${newMessageHref}">New Message</a></li>
+						<li><a href="${newMessageHref}">Message Your Representative!</a></li>
 						<c:url var="sentMessagesHref" value="/users/${currentUser}/messages" />
-						<li><a href="${sentMessagesHref}">Sent Messages</a></li>
-						<c:url var="changePasswordHref" value="/users/${currentUser}/changePassword" />
-						<li><a href="${changePasswordHref}">Change Password</a></li>
+						<li><a href="${sentMessagesHref}">Forum</a></li>
+<%-- 						<c:url var="changePasswordHref" value="/users/${currentUser}/changePassword" />
+						<li><a href="${changePasswordHref}">Change Password</a></li> --%>
 					</c:if>
 				</ul>
 				
@@ -84,6 +84,6 @@
 			</div>
 		</nav>
 		<c:if test="${not empty currentUser}">
-			<p id="currentUser">Current User: ${currentUser}</p>
+			<p id="currentUser">Current User: ${currentUser.userName}</p>
 		</c:if>		
 		<div class="container"> 
