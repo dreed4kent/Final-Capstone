@@ -14,8 +14,8 @@
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	    <c:url value="js/main.js" var="mainjs"/>
 	    <script src="${mainjs}"></script>
-	    <c:url var="cssHref" value="/css/voterInformation.css" />
-		<link rel="stylesheet" type="text/css" href="${cssHref}">
+	<c:url var="stateCssHref" value="/css/state.css" />
+		<link rel="stylesheet" type="text/css" href="${stateCssHref}">
 
 		<c:url value="/js/state.js" var="state"/>
 		<script type="text/javascript" src="${state}"></script>

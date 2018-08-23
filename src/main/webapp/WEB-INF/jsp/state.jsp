@@ -2,6 +2,9 @@
 
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
+<c:url var="stateCssHref" value="/css/state.css" />
+		<link rel="stylesheet" type="text/css" href="${stateCssHref}">
+
  	<h3><span id="stateName"></span>:</h3>
  	
  	<div class="senator"> <h4>Senators:</h4> 
@@ -30,11 +33,7 @@
   		<div id="governorPhoneNumber"></div>
   		<div id="governorWebSite"></div> 
   		<div><img id="governorPhoto"/></div>
-  		
-   		<div>https://www.facebook.com/<span id="governorFB"></span></div>
-  		<div>https://twitter.com/<span id="governorTwitter"></span></div>
-  		<div>https://www.youtube.com/results?search_query=UCtVl3kb7Xvt3pY7l6x-M6LA<span id="governorYouTube"></span></div>
-  		<div>https://plus.google.com/<span id="governorGooglePlus"></span></div>
+  	
  	</div>
  	<br/>
 
@@ -62,8 +61,7 @@
 			<li>${townhall.representative} ${townhall.district} ${townhall.dates} ${townhall.times} ${townhall.address}</li>
 		</c:forEach>
 	</ul>
-	<br>
-	<br>
+
 
 <%-- 	<c:url var="formAction" value="/district" />
 	<form class="districtSearch" method="GET" action=district>

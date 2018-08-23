@@ -68,14 +68,35 @@ $(document).ready(function () {
         
         //Governor
         $("governorName").html(data.divisions[data.offices[3].divisionId].name);
+        
+        
         $("#governorName").html(data.officials[4].name);
-       $("#governorWebSite").html(data.officials[4].urls);
+        
+        
+        var website3 = $("<a>").attr("href", data.officials[4].urls); //governor website hyperlink
+        website3.attr("target","_blank").text(data.officials[4].urls);
+        $("#governorWebSite").append(website3); 
+       
+       
         $("#governorParty").html(data.officials[4].party);
+        
+        
         $("#governorPhoneNumber").html(data.officials[4].phones);
-        $("#governorFB").html(data.officials[4].channels[0].id);
+        
+        var website4 = $("<a>").attr("href", data.officials[4].channels[0].id); //governor website hyperlink
+        website4.attr("target","_blank").text(data.officials[4].channels[0].id);
+        $("#governorFB").append(website4); 
+        
+        
         $("#governorTwitter").html(data.officials[4].channels[1].id);
+        
+        
         $("#governorYouTube").html(data.officials[4].channels[2].id);
+        
+        
        $("#governorGooglePlus").html(data.officials[4].channels[3].id);
+       
+       
        
        $("#governorPhoto").attr("src", data.officials[4].photoUrl); // state governor photo
 

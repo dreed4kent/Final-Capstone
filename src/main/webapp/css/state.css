@@ -79,7 +79,6 @@ path:hover, circle:hover {
 
 /* Page Footer */
 .containerNew {
-  position: absolute;
   bottom: 0;
   width: 100%;
   justify-content: space-evenly;
