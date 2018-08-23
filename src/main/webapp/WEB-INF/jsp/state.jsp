@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:import url="/WEB-INF/jsp/header.jsp" />
+<c:import url="/WEB-INF/jsp/newHeader.jsp" />
 
  	<h3><span id="stateName"></span>:</h3>
  	
@@ -31,10 +31,10 @@
   		<div id="governorWebSite"></div> 
   		<div><img id="governorPhoto"/></div>
   		
-   		<div>https://www.facebook.com/<span id="governorFB"></span></div>
+<!--    		<div>https://www.facebook.com/<span id="governorFB"></span></div>
   		<div>https://twitter.com/<span id="governorTwitter"></span></div>
   		<div>https://www.youtube.com/results?search_query=UCtVl3kb7Xvt3pY7l6x-M6LA<span id="governorYouTube"></span></div>
-  		<div>https://plus.google.com/<span id="governorGooglePlus"></span></div>
+  		<div>https://plus.google.com/<span id="governorGooglePlus"></span></div> -->
  	</div>
  	<br/>
 
