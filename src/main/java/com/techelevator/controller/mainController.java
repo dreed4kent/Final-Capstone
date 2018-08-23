@@ -86,13 +86,17 @@ public class mainController {
 		session.getAttribute("currentUser");
 		return "askQuestion";
 	}
-//	@RequestMapping (path="/users/${forumUrl}/messages", method=RequestMethod.GET)
-//	public String displayForum(HttpSession session, @PathVariable String forumUrl) {
-//		session.getAttribute("currentUser");
-//		return "forum";
+	@RequestMapping (path="/users/{forumUrl}/messages", method=RequestMethod.GET)
+	public String displayForum(ModelMap map, HttpSession session, @PathVariable String forumUrl) {
+		 User user = new User();
+		 user = (User) session.getAttribute("currentUser");
+		map.addAttribute("userQuestions", forumDAO.getQuestionsByUserName(user.getUserName()));
+		return "forum";
+	}
 	
 	@RequestMapping(path="/submit", method=RequestMethod.POST)
-	public String displayForumFromQuestionPage(ModelMap map,
+	public String displayForumFromQuestionPage(
+											   ModelMap map,
 											   HttpSession session,
 											   @RequestParam String representative,
 								   			   @RequestParam String topic,
@@ -109,8 +113,9 @@ public class mainController {
 	
 	
 	
-	@RequestMapping (path="forum", method=RequestMethod.GET)
-		public String displayForum() {
+	@RequestMapping (path="/forum", method=RequestMethod.GET)
+	public String displayForum(ModelMap map, HttpSession session) {
+
 		return "forum";
 	}
 

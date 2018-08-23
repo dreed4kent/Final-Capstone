@@ -6,6 +6,8 @@
 <form class="questions" method="POST" action= "${questionUrl}">
 <input type="hidden" name="CSRF_TOKEN" value="${CSRF_TOKEN}"/>
 
+
+<script>let fullAddress = '${currentUser.address}'</script>
 	<h4>Select which of your Representatives you prefer to contact:</h4>
 	
 	<select name="representative" id="representative">
