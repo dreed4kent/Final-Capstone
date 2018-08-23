@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:import url="/WEB-INF/jsp/newHeader.jsp" />
+<c:import url="/WEB-INF/jsp/header.jsp" />
 
 <c:url var="stateCssHref" value="/css/state.css" />
 		<link rel="stylesheet" type="text/css" href="${stateCssHref}">
