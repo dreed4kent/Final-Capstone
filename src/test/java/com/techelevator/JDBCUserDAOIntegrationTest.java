@@ -26,11 +26,11 @@ public class JDBCUserDAOIntegrationTest extends DAOIntegrationTest {
 	String userName = "user";
 	String password = "0123456789Abcde";
 
-	@Before
-	public void setup() {
-		userDAO = new JDBCUserDAO(dataSource, hashMaster);
-		userDAO.saveUser(userName, password);
-	}
+//	@Before
+//	public void setup() {
+//		userDAO = new JDBCUserDAO(dataSource, hashMaster);
+//		userDAO.saveUser(userName, password);
+//	}
 	
 	@Test 
 	public void test_search_for_username_and_password() {

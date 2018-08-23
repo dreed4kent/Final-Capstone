@@ -55,6 +55,27 @@
 				<label for="confirmPassword">Confirm Password: </label>
 				<input type="password" id="confirmPassword" name="confirmPassword" placeHolder="Re-Type Password" class="form-control" />	
 			</div>
+			<div class="form-group">
+				<label for="address">Address:</label>
+				<input type="text" id="districtSearch" name="address" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="apt">Apt:</label>
+				<input type="text" id="districtSearch" name="apt" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="city">City:</label>
+				<input type="text" id="districtSearch" name="city" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="state">State:</label>
+				<input type="text" id="districtSearch" name="state" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="zipCode">Zip Code:</label>
+				<input type="text" id="districtSearch" name="zipCode" class="form-control" />
+			</div>
+			
 			<button type="submit" class="btn btn-default">Create User</button>
 		</div>
 		<div class="col-sm-4"></div>
