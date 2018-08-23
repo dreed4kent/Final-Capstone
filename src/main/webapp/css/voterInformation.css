@@ -76,13 +76,10 @@ path:hover, circle:hover {
   font-family: arial;
 }
 
-header {
-    background-image: url('../img/us_flag_header.png');
-    background-size: 100% 100%;
-}
+
 /* Page Footer */
 .containerNew {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   justify-content: space-evenly;
@@ -96,10 +93,10 @@ header {
 }
 
 .mainDropMenu {
-  position: fixed;
-  width: 100%;
+  position: absolute;
+ <!-- width: 100%; -->
   justify-content: space-evenly;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   background-color: white;
   font-size: 12px;
@@ -112,19 +109,19 @@ header {
 .row {
 	flex: 1;
 }
-.headerItem1 {
+/* .headerItem1 {
 	margin-right: auto;
 }
+ */
 
-.container420 {
-	display : flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
 a {
-    color: white;
-    opacity: 0.5;
+    color: black;
     
 }
+
+img{
+	
+}
+
 
 

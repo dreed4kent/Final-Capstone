@@ -3,14 +3,15 @@
 <c:import url="/WEB-INF/jsp/header.jsp" />
 
  	<h3><span id="stateName"></span>:</h3>
+ 	
  	<div class="senator"> <h4>Senators:</h4> 
  		<b><div id="senator1"/></div></b>
   		<div id=senator1Party /></div>
   		<div id="senator1Address" /></div>
-  		<div id="senator1PhoneNumber" /></div>
+  		<div id="senator1PhoneNumber"/></div>
   		<div id="senator1WebSite" /></div>
   		<div id="senator1" /></div>
-  		<!-- <img src="senator1Image"/> -->
+  		<div><img id="senator1Photo"/></div>
  	</div>
  	<br/>
  	<div class="senator">
@@ -20,7 +21,7 @@
   		<div id="senator2PhoneNumber" /></div>
   		<div id="senator2WebSite" /></div>
   		<div id="senator2" /></div>
-  		<!-- <img src="senator2Image"/> -->
+  		<div><img id="senator2Photo"/></div>
  	</div>
  	<br/>
  	<div class="governor"><h4>Governor:</h4>
@@ -28,6 +29,8 @@
    		<div id="governorParty"></div>
   		<div id="governorPhoneNumber"></div>
   		<div id="governorWebSite"></div> 
+  		<div><img id="governorPhoto"/></div>
+  		
    		<div>https://www.facebook.com/<span id="governorFB"></span></div>
   		<div>https://twitter.com/<span id="governorTwitter"></span></div>
   		<div>https://www.youtube.com/results?search_query=UCtVl3kb7Xvt3pY7l6x-M6LA<span id="governorYouTube"></span></div>
