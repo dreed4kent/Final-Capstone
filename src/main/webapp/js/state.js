@@ -28,25 +28,43 @@ $(document).ready(function () {
     }).done(function (data) {
     	
     	$("#stateName").html(data.divisions[data.offices[2].divisionId].name);
+    	
+    	
     	//checks input is not Washington DC
     	if (data.normalizedInput.state != "DC") {
+    		
     	//Senator #1
         $("#senator1").html(data.officials[2].name);
-        var website1 = $("<a>").attr("href", data.officials[2].urls); //do an image the same way, except using "src"
+        
+        var website1 = $("<a>").attr("href", data.officials[2].urls); //senator 1 website hyperlink
         website1.attr("target","_blank").text(data.officials[2].urls);
         $("#senator1WebSite").append(website1);
-        $("#senator1Party").html(data.officials[2].party);
-        $("#senator1PhoneNumber").html(data.officials[2].phones);
-        $("#senator1Address").html(data.officials[2].address);
-        $("#senator1Image").html(data.officials[2].photoUrl);
-    	
+        
+        $("#senator1Party").html(data.officials[2].party); //senator 1 party affiliation
+        
+        $("#senator1PhoneNumber").html(data.officials[2].phones); //senator 1 phone number
+        
+        $("#senator1Address").html(data.officials[2].address); //senator 1 address
+
+        
+        $("#senator1Photo").attr("src", data.officials[2].photoUrl); // senator 1 photo
+            	
     	//Senator #2
-        $("#senator2").html(data.officials[3].name);
-        $("#senator2WebSite").html(data.officials[3].urls);
-        $("#senator2Party").html(data.officials[3].party);
-        $("#senator2PhoneNumber").html(data.officials[3].phones);
-        $("#senator2Address").html(data.officials[3].address);
-        $("#senator2Image").html(data.officials[3].photoUrl);
+        $("#senator2").html(data.officials[3].name); //senator 2 name
+        
+        var website2 = $("<a>").attr("href", data.officials[3].urls); //senator 2 website hyperlink
+        website2.attr("target","_blank").text(data.officials[3].urls);
+        $("#senator2WebSite").append(website2); 
+        
+        
+        $("#senator2Party").html(data.officials[3].party); //senator 2 party affiliation
+        
+        $("#senator2PhoneNumber").html(data.officials[3].phones); //senator 2 phone number
+        
+        $("#senator2Address").html(data.officials[3].address); //senator 2 address
+        
+        $("#senator2Photo").attr("src", data.officials[3].photoUrl); // senator 2 photo
+
         
         //Governor
         $("governorName").html(data.divisions[data.offices[3].divisionId].name);
@@ -58,7 +76,9 @@ $(document).ready(function () {
         $("#governorTwitter").html(data.officials[4].channels[1].id);
         $("#governorYouTube").html(data.officials[4].channels[2].id);
        $("#governorGooglePlus").html(data.officials[4].channels[3].id);
-       $("#governorImage").html(data.officials[4].photoUrl);
+       
+       $("#governorPhoto").attr("src", data.officials[4].photoUrl); // state governor photo
+
     	} else {
     		//Washington DC
     		alert("Taxation Without Representation");
