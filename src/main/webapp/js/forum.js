@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-	//let fullAddress = $("currentUser.address");
-	let fullAddress = "1275 Kinnear Rd, Columbus, OH 43212";
+	
+	//let fullAddress = "1275 Kinnear Rd, Columbus, OH 43212";
 	
 	//google's civic API
     var apiUrl = "https://www.googleapis.com/civicinfo/v2/representatives";

@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:import url="/WEB-INF/jsp/header.jsp" />
+<c:import url="/WEB-INF/jsp/newHeader.jsp" />
 
  	<h3><span id="stateName"></span>:</h3>
 
@@ -29,10 +29,10 @@
     	<div id="representativeParty"></div>
    		<div id="representativePhoneNumber"></div>
    		<div id="representativeWebSite"></div> 
-   		<div>https://www.facebook.com/<span id="representativeFB"></span></div>
+<!--    		<div>https://www.facebook.com/<span id="representativeFB"></span></div>
    		<div>https://twitter.com/<span id="representativeTwitter"></span></div>
    		<div>https://www.youtube.com/results?search_query=UCtVl3kb7Xvt3pY7l6x-M6LA<span id="representativeYouTube"></span></div>
-   		<div>https://plus.google.com/<span id="representativeGooglePlus"></span></div>
+   		<div>https://plus.google.com/<span id="representativeGooglePlus"></span></div> -->
    	</div>
     
 

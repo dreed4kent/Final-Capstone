@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<c:import url="/WEB-INF/jsp/header.jsp" />
+<c:import url="/WEB-INF/jsp/newHeader.jsp" />
 
 <c:url var="stateCssHref" value="/css/state.css" />
 		<link rel="stylesheet" type="text/css" href="${stateCssHref}">
@@ -33,7 +33,7 @@
   		<div id="governorPhoneNumber"></div>
   		<div id="governorWebSite"></div> 
   		<div><img id="governorPhoto"/></div>
-  	
+
  	</div>
  	<br/>
 
